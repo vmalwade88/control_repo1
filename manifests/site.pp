@@ -5,7 +5,7 @@ node 'master.puppet.vm' {
   include role::master_server
   file {'/root/TestFile.txt':
      ensure => present,
-     content => $fqdn,
+     content => "Welcome to puppet CMT, Computer Name: ${fqdn}\nComputer IP Address : ${ipaddress}\n",
   }
 }
 
